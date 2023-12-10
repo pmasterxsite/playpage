@@ -50,6 +50,11 @@
     font-size: 15px;
 }
 
+.btnCss{
+    display: grid;
+    grid-row: 2/3;
+    height: 40px;
+}
 
 @media screen and (max-width: 1000px){
     .main {
