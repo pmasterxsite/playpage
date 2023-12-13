@@ -1,9 +1,8 @@
-.navbar{
+.navbar {
     height: 3rem;
     width: 85%;
     display: flex;
     align-items: center;
-    /* border: 2px solid red; */
     margin: auto;
 
 }
@@ -13,17 +12,17 @@
     font-size: 20px;
 }
 
-.firstPart{
+.firstPart {
     color: red;
     font-weight: bold;
 }
 
-.middlePart{
+.middlePart {
     position: relative;
     right: 6px;
 }
 
-.lastPart{
+.lastPart {
     position: relative;
     right: 12px;
     color: red;
@@ -32,55 +31,48 @@
 
 .main {
     width: 98%;
-    margin: 10px auto 5px auto;
-    /* border: 2px solid red; */
-    height: 80vh;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows:  65vh 1fr;
+    min-height: 80vh;
+    margin: 10px auto;
+    border-color: 2px solid red;
 }
 
-/* .cardCss {
+.leftRightArea {
+    width: 100%;
+    height: 75vh;
     display: grid;
-    grid-column: 1/2;
-} */
+    grid-gap: 5px;
+    grid-template-columns: 65vw 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+.rightDiv {
+    width: 100%;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+
+}
 
 .card p {
     margin: 5px 2px 5px 5px;
     font-size: 15px;
 }
 
-.btnCss{
+.btnCss {
     display: grid;
     grid-row: 2/3;
     height: 40px;
 }
 
-@media screen and (max-width: 1000px){
-    .main {
-        grid-template-columns: 72% 1fr;
-    }
-}
-
-@media screen and (max-width: 700px){
-    .main {
-        grid-template-columns: 1fr;
-        grid-template-rows:  55vh 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .main {
-        grid-template-columns: 1fr;
-        grid-template-rows:  40vh 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 350px){
-    .main {
-        grid-template-columns: 1fr;
-        grid-template-rows:  30vh 1fr 1fr;
-    }
+.directAds {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
 
 }
 
@@ -93,15 +85,41 @@
     color: white;
 }
 
-.footer p{
+.footer p {
     margin: 5px 10px;
     font-size: 15px;
     position: relative;
-    /* top: 6px; */
 }
 
-@media screen and (max-width: 500px){
-    .footer p{
+@media screen and (max-width: 500px) {
+    .footer p {
         font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 740px) {
+    .leftRightArea {
+        height: 65vh;
+    }
+
+    .rightDiv {
+        height: 65vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .leftRightArea {
+        height: 52vh;
+        width: 99.6%;
+    }
+
+    .cardCss {
+        grid-column: 1/3;
+    }
+
+    .disNone {
+        display: none;
     }
 }
