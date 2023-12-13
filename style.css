@@ -31,49 +31,41 @@
 
 .main {
     width: 98%;
-    min-height: 80vh;
-    margin: 10px auto;
-    border-color: 2px solid red;
-}
-
-.leftRightArea {
-    width: 100%;
-    height: 75vh;
+    margin: 10px auto 5px auto;
+    height: 100vh;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 5px;
-    grid-template-columns: 65vw 1fr;
-    grid-template-rows: 1fr;
 }
 
-
-.rightDiv {
-    width: 100%;
-    height: 75vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
-
-}
 
 .card p {
     margin: 5px 2px 5px 5px;
     font-size: 15px;
 }
 
-.btnCss {
-    display: grid;
-    grid-row: 2/3;
-    height: 40px;
+@media screen and (max-width: 810px) {
+    .main {
+        height: unset;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
-.directAds {
-    margin: 10px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 5px;
+@media screen and (max-width: 600px) {
+    .main {
+        height: unset;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
 
+@media screen and (max-width: 420px) {
+    .main {
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
 .footer {
@@ -89,37 +81,11 @@
     margin: 5px 10px;
     font-size: 15px;
     position: relative;
+    /* top: 6px; */
 }
 
 @media screen and (max-width: 500px) {
     .footer p {
         font-size: 12px;
-    }
-}
-
-
-@media screen and (max-width: 740px) {
-    .leftRightArea {
-        height: 65vh;
-    }
-
-    .rightDiv {
-        height: 65vh;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .leftRightArea {
-        height: 52vh;
-        width: 99.6%;
-    }
-
-    .cardCss {
-        grid-column: 1/3;
-    }
-
-    .disNone {
-        display: none;
     }
 }
